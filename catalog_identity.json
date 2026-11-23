@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Unholy War, The",
+    "id": "SLES-01300",
+    "boot_exe": "SLES_013.00"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Unholy War, The (Europe) (En,Fr,De,Es,It).cue",
+    "bin_name": "Unholy War, The (Europe) (En,Fr,De,Es,It).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 239268960,
+      "md5": "9133e8a789c9cf10dd98927134a1df92",
+      "sha1": "6b83484df739e05485c556f6ba57272ef6331723",
+      "crc32": "f341f4b0"
+    },
+    "disc_fp": "6012eb71414b4d824c7a0b73904059b1a1c82fc0b5f8301677071a3d9138b798"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80010A1C",
+    "text_size": "0x00006800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 77,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "cue_path": "disc/Unholy War, The (Europe) (En,Fr,De,Es,It).cue",
+  "cue_name": "Unholy War, The (Europe) (En,Fr,De,Es,It).cue",
+  "bin_name": "Unholy War, The (Europe) (En,Fr,De,Es,It).bin",
+  "track_count": 1,
+  "data_track_size": 239268960,
+  "data_track_md5": "9133e8a789c9cf10dd98927134a1df92",
+  "data_track_sha1": "6b83484df739e05485c556f6ba57272ef6331723",
+  "data_track_crc32": "f341f4b0",
+  "boot_exe": "SLES_013.00",
+  "serial": "SLES-01300",
+  "serial_exe": "SLES_013.00",
+  "volume_id": "SLES_01300",
+  "display_name": "Unholy War, The (Europe)",
+  "load_address": "0x80010000",
+  "entry_pc": "0x80010A1C",
+  "text_size": "0x00006800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "6012eb71414b4d824c7a0b73904059b1a1c82fc0b5f8301677071a3d9138b798",
+  "boot_exe_sha256": "19b6cc1e537617a23780f6da25e8c875627dfa1aed27e3219adfaa7a7ec01a90",
+  "boot_exe_size": 28672,
+  "boot_exe_page_crc32": [
+    "47d55ab4",
+    "c3718446",
+    "ec23ec00",
+    "0eb67001",
+    "28a3adfc",
+    "910432b0",
+    "36c54f36"
+  ],
+  "seed_count": 77,
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

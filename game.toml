@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Unholy War, The"
+id = "SLES-01300"
+players = 1
+exe = "disc/SLES_013.00"
+disc = "disc/Unholy War, The (Europe) (En,Fr,De,Es,It).cue"
+discs = ["disc/Unholy War, The (Europe) (En,Fr,De,Es,It).cue"]
+disc_serials = ["SLES-01300"]
+load_address = "0x80010000"
+entry_pc = "0x80010A1C"
+text_size = "0x00006800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Unholy War, The (Europe) (En,Fr,De,Es,It).bin"
+cue_name = "Unholy War, The (Europe) (En,Fr,De,Es,It).cue"
+boot_exe = "SLES_013.00"
+known_sizes = [239268960]
+known_md5 = [
+  "9133e8a789c9cf10dd98927134a1df92",
+]
+known_sha1 = [
+  "6b83484df739e05485c556f6ba57272ef6331723",
+]
+known_crc32 = [
+  "f341f4b0",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Unholy War, The Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "6012eb71414b4d824c7a0b73904059b1a1c82fc0b5f8301677071a3d9138b798"
